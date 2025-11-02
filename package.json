@@ -1,0 +1,29 @@
+{
+  "name": "bookpoint-backend",
+  "version": "1.0.0",
+  "description": "BookPoint backend with MongoDB, JWT auth, and Nodemailer support.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "nodemailer": "^6.9.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["bookpoint", "express", "mongodb", "jwt", "vercel", "backend"],
+  "author": "BookPoint Project",
+  "license": "MIT"
+}
