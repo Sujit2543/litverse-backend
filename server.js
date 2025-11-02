@@ -217,6 +217,12 @@ const verifyToken = (req, res, next) => {
   });
 };
 
+app.get("/", (req, res) => {
+  res.send("backend is working")
+});
+
+
+
 // --- Protected Route ---
 app.get("/home", verifyToken, (req, res) => {
   res.json({
