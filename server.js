@@ -13,7 +13,11 @@ dotenv.config();
 // --- Initialize App ---
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 // --- MongoDB Connection ---
 mongoose
