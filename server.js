@@ -38,8 +38,8 @@ app.use(cors({
     "http://localhost:5174", 
     "http://localhost:5175", 
     "http://localhost:3000",
-    "https://your-app.vercel.app", // Add your production URL
-    "https://yourdomain.com", // Add your custom domain
+    "https://litverse-frontend.vercel.app", // Your production frontend URL
+    "https://yourdomain.com", // Add your custom domain if you have one
     /^http:\/\/192\.168\.\d+\.\d+:\d+$/ // Allow local network IPs
   ],
   credentials: true
