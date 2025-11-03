@@ -32,18 +32,21 @@ dotenv.config();
 // --- Initialize App ---
 const app = express();
 app.use(express.json());
+// ✅ CORS Configuration - Allow multiple frontend origins
 app.use(cors({
   origin: [
     "http://localhost:5173", 
     "http://localhost:5174", 
     "http://localhost:5175", 
     "http://localhost:3000",
-    "https://litverse-frontend.vercel.app", // Your production frontend URL
-    "https://yourdomain.com", // Add your custom domain if you have one
+    "https://litverse-frontend.vercel.app", // Vercel deployment
+    "https://litverse-onlinelib.netlify.app", // Netlify deployment
     /^http:\/\/192\.168\.\d+\.\d+:\d+$/ // Allow local network IPs
   ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
+
 
 // Session configuration
 app.use(session({
